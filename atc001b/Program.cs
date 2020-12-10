@@ -11,7 +11,7 @@ namespace atc001b
             var inputs = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
             var N = inputs[0];
             var Q = inputs[1];
-            UnionFind uf = new UnionFind(N);
+            UnionFindTree uf = new UnionFindTree(N);
 
             for (int i = 0; i < Q; ++i) {
                 inputs = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
@@ -37,11 +37,11 @@ namespace atc001b
 
         }
 
-        class UnionFind {
+        class UnionFindTree {
             int[] parents;
             int[] ranks;
 
-            public UnionFind(int n) 
+            public UnionFindTree(int n) 
             {
                 parents = new int[n];
                 ranks = new int[n];
