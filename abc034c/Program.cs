@@ -6,7 +6,7 @@ namespace abc034c
 {
     class Program
     {
-        static long mod = 1000000007;
+       
 
         static void Main(string[] args)
         {
@@ -16,7 +16,7 @@ namespace abc034c
 
             Console.WriteLine(Combination(W+H-2, W-1));
         }
-
+        static long mod = 1000000007;
         //a^p-2 ≡ a^-1 (mod M)
         static long Inverse(long a) {
             return Pow(a, mod-2);
@@ -46,6 +46,7 @@ namespace abc034c
         static long Combination(int n, int k) { 
             return (Factorial(n) * Inverse(Factorial(n - k)) % mod) * Inverse(Factorial(k)) % mod;
         }
+
 
     }
 }

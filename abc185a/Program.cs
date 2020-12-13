@@ -8,13 +8,8 @@ namespace abc185a
         static void Main(string[] args)
         {
             var inputs = Console.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
-            var (A, B) = (inputs[0], inputs[1]);
-            double L = double.Parse(Console.ReadLine());
-
-            int res = 0;
-
-
-            Console.WriteLine(res);
+            var (A, B, C, D) = (inputs[0], inputs[1], inputs[2], inputs[3]);
+            Console.WriteLine(Math.Min(A, Math.Min(B, Math.Min(C, D))));
         }
     }
 }
