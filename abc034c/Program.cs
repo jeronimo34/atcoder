@@ -16,6 +16,7 @@ namespace abc034c
 
             Console.WriteLine(Combination(W+H-2, W-1));
         }
+
         static long mod = 1000000007;
         //a^p-2 ≡ a^-1 (mod M)
         static long Inverse(long a) {
